@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#16100b">
+    <title>Amal & Merena Wedding Invitation</title>
+    <meta name="description" content="With joyful hearts, Amal & Merena invite you to their wedding on 31 August 2026 at St. Antony's Church Kurichilakode.">
+    <meta property="og:title" content="Amal & Merena are getting married">
+    <meta property="og:description" content="31 August 2026, 10.30 am at St. Antony's Church Kurichilakode.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/couple-beach.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" as="image" href="assets/couple-beach.png">
+    <link rel="preload" as="image" href="assets/rings.jpeg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <script>
+      window.INVITATION = {
+        couple: "Amal & Merena",
+        bride: "Merena",
+        groom: "Amal",
+        dateDisplay: "31-08-2026",
+        weddingDateISO: "2026-08-31T10:30:00+05:30",
+        time: "10.30 am",
+        venue: "St. Antony's Church Kurichilakode",
+        locationLink: "https://share.google/QpNs4SwrIQI3mTwQu",
+        coverImage: "assets/rings.jpeg",
+        mainPhoto: "assets/couple-beach.png",
+        secondPhoto: "assets/couple-cafe.png",
+        music: "assets/wedding-music.mpeg",
+        message: "With grateful hearts and the blessing of our families, we invite you to share in the joy of our wedding day. Your presence will make our celebration warmer, brighter, and complete."
+      };
+    </script>
+
+    <audio id="music" preload="metadata" loop playsinline></audio>
+
+    <main class="invite-shell" id="top">
+      <section class="cover" id="cover" aria-label="Opening invitation cover">
+        <img class="cover__image" data-config-src="coverImage" alt="Golden wedding rings">
+        <div class="cover__veil"></div>
+        <div class="shine" aria-hidden="true"></div>
+        <div class="cover__content">
+          <p class="eyebrow">Wedding Invitation</p>
+          <h1 data-config-text="couple">Amal & Merena</h1>
+          <p class="cover__date"><span data-config-text="dateDisplay">31-08-2026</span> · <span data-config-text="time">10.30 am</span></p>
+          <button class="open-button" id="openInvite" type="button" aria-label="Open invitation"><span>Tap to open</span></button>
+        </div>
+      </section>
+
+      <section class="hero section" id="invitation">
+        <div class="gold-dust" aria-hidden="true"></div>
+        <p class="eyebrow reveal">Together with their families</p>
+        <h2 class="couple-name reveal" data-config-text="couple">Amal & Merena</h2>
+        <p class="message reveal" data-config-text="message"></p>
+        <div class="scroll-cue" aria-hidden="true"><span></span><small>Scroll</small></div>
+      </section>
+
+      <section class="section reveal-section" aria-label="Scratch to reveal wedding date">
+        <p class="eyebrow reveal">A little golden secret</p>
+        <h2 class="section-title reveal">Scratch to reveal the day</h2>
+        <div class="scratch-card reveal" id="scratchCard">
+          <div class="date-reveal">
+            <span class="date-number" data-config-text="dateDisplay">31-08-2026</span>
+            <span class="date-time" data-config-text="time">10.30 am</span>
+          </div>
+          <canvas id="scratchCanvas" aria-label="Scratch area"></canvas>
+          <div class="scratch-hint" id="scratchHint">Rub here</div>
+        </div>
+      </section>
+
+      <section class="section countdown-section">
+        <p class="eyebrow reveal">Counting the days</p>
+        <h2 class="section-title reveal">Until we say yes</h2>
+        <div class="countdown reveal" id="countdown">
+          <div><strong data-unit="days">00</strong><span>Days</span></div>
+          <div><strong data-unit="hours">00</strong><span>Hours</span></div>
+          <div><strong data-unit="minutes">00</strong><span>Minutes</span></div>
+          <div><strong data-unit="seconds">00</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="photo-section" aria-label="Couple photo">
+        <img data-config-src="mainPhoto" alt="Amal and Merena on the beach" loading="lazy">
+        <div class="photo-caption reveal">
+          <p class="eyebrow">Our beginning</p>
+          <h2 data-config-text="couple">Amal & Merena</h2>
+        </div>
+      </section>
+
+      <section class="section venue-section">
+        <p class="eyebrow reveal">Wedding ceremony</p>
+        <h2 class="section-title reveal" data-config-text="venue">St. Antony's Church Kurichilakode</h2>
+        <p class="venue-meta reveal"><span data-config-text="dateDisplay">31-08-2026</span> at <span data-config-text="time">10.30 am</span></p>
+        <div class="actions reveal">
+          <a class="action-button" id="mapButton" href="#" target="_blank" rel="noopener">Open map</a>
+          <button class="action-button ghost" id="shareButton" type="button">Share invite</button>
+        </div>
+      </section>
+
+      <section class="section share-review">
+        <img data-config-src="secondPhoto" alt="Amal and Merena at sunset" loading="lazy">
+        <div class="share-copy reveal">
+          <h2>Amal & Merena are getting married</h2>
+          <p>31 August 2026 · 10.30 am · St. Antony's Church Kurichilakode</p>
+        </div>
+      </section>
+    </main>
+
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Toggle background music">Music</button>
+    <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
