@@ -12,8 +12,22 @@
     });
     $('#music').src = config.music;
     $('#mapButton').href = config.locationLink;
+    document.documentElement.style.setProperty('--opening-image', 'url("' + config.openingPhoto + '")');
+    renderGallery();
   }
 
+  function renderGallery() {
+    const grid = $('#galleryGrid');
+    if (!grid || !Array.isArray(config.galleryPhotos)) return;
+    grid.innerHTML = '';
+    config.galleryPhotos.forEach((photo) => {
+      const image = document.createElement('img');
+      image.src = photo.src;
+      image.alt = photo.alt || `${config.couple} gallery photo`;
+      image.loading = 'lazy';
+      grid.appendChild(image);
+    });
+  }
   function openInvite() {
     $('#cover').classList.add('is-open');
     document.body.classList.add('is-opened');
@@ -204,6 +218,7 @@
   $('#musicToggle').addEventListener('click', toggleMusic);
   $('#shareButton').addEventListener('click', shareInvite);
 })();
+
 
 
 

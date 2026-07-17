@@ -98,7 +98,7 @@ button, a { -webkit-tap-highlight-color: transparent; font-style: italic; }
   text-decoration: none;
 }
 .open-button { min-width: 168px; min-height: 50px; padding: 0 28px; animation: pulse 2.4s ease-in-out infinite; }
-.hero { color: var(--ink); background: linear-gradient(rgba(255, 249, 238, .86), rgba(255, 249, 238, .9)), url("assets/couple-beach.png") center/cover; }
+.hero { color: var(--ink); background: linear-gradient(rgba(255, 249, 238, .84), rgba(255, 249, 238, .9)), var(--opening-image) center/cover; }
 .gold-dust {
   position: absolute;
   inset: 0;
@@ -162,6 +162,37 @@ button, a { -webkit-tap-highlight-color: transparent; font-style: italic; }
 .photo-section::after, .share-review::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 20%, rgba(19, 13, 8, .72)); }
 .photo-caption { position: relative; z-index: 1; padding: 0 22px calc(56px + env(safe-area-inset-bottom)); text-align: center; }
 .photo-caption h2 { margin: 0; color: #ffe8a2; font-size: clamp(2.8rem, 15vw, 6rem); font-weight: 400; line-height: .95; }
+.gallery-section {
+  min-height: auto;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(215, 168, 75, .22), transparent 34%),
+    linear-gradient(180deg, #fff8ed, #ead7bd);
+}
+.gallery-grid {
+  width: min(100%, 580px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(45, 29, 16, .18);
+  background: #ead7bd;
+}
+.gallery-grid img:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+  aspect-ratio: 4 / 3;
+}
+.gallery-grid img:last-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  padding: 10px;
+  background: #f3e7d5;
+}
 .venue-section { min-height: 82svh; background: linear-gradient(180deg, #fff8ed, #ead0ae); }
 .venue-meta { margin: -4px 0 30px; color: var(--muted); font-family: "Trebuchet MS", Arial, sans-serif; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
@@ -189,6 +220,7 @@ button, a { -webkit-tap-highlight-color: transparent; font-style: italic; }
 @keyframes drift { to { background-position: 90px 120px, -80px 100px; } }
 @keyframes drop { 0% { transform: scaleY(.35); opacity: .25; } 50% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(.35); opacity: .25; } }
 @keyframes petalFall { to { transform: translate3d(var(--x), 110vh, 0) rotate(560deg); opacity: 0; } }
+
 
 
 

@@ -9,10 +9,10 @@
     <meta property="og:title" content="Amal & Merena are getting married">
     <meta property="og:description" content="31 August 2026, 10.30 am at St. Antony's Church Kurichilakode.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/couple-beach.png">
+    <meta property="og:image" content="assets/rings.jpeg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="preload" as="image" href="assets/couple-beach.png">
     <link rel="preload" as="image" href="assets/rings.jpeg">
+    <link rel="preload" as="image" href="assets/opening-rmp02124.jpg">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -27,8 +27,18 @@
         venue: "St. Antony's Church Kurichilakode",
         locationLink: "https://share.google/QpNs4SwrIQI3mTwQu",
         coverImage: "assets/rings.jpeg",
-        mainPhoto: "assets/couple-beach.png",
-        secondPhoto: "assets/couple-cafe.png",
+        openingPhoto: "assets/opening-rmp02124.jpg",
+        mainPhoto: "assets/our-beginning-rmp02504.jpg",
+        galleryPhotos: [
+          { src: "assets/gallery-garden.jpeg", alt: "Amal and Merena in the garden" },
+          { src: "assets/gallery-coffee.jpeg", alt: "Amal and Merena sharing coffee" },
+          { src: "assets/gallery-rmp02130.jpg", alt: "Amal and Merena close together" },
+          { src: "assets/gallery-rmp02188.jpg", alt: "Amal and Merena smiling on the beach" },
+          { src: "assets/gallery-rmp02498.jpg", alt: "Amal and Merena walking on the beach" },
+          { src: "assets/gallery-rmp04980.jpg", alt: "Amal and Merena walking under trees" },
+          { src: "assets/gallery-rmp02385.jpg", alt: "Amal and Merena close-up portrait" }
+        ],
+        secondPhoto: "assets/closing-running-beach.jpeg",
         music: "assets/wedding-music.mpeg",
         message: "With grateful hearts and the blessing of our families, we invite you to share in the joy of our wedding day. Your presence will make our celebration warmer, brighter, and complete."
       };
@@ -82,11 +92,17 @@
       </section>
 
       <section class="photo-section" aria-label="Couple photo">
-        <img data-config-src="mainPhoto" alt="Amal and Merena on the beach" loading="lazy">
+        <img data-config-src="mainPhoto" alt="Amal and Merena close-up portrait" loading="lazy">
         <div class="photo-caption reveal">
           <p class="eyebrow">Our beginning</p>
           <h2 data-config-text="couple">Amal & Merena</h2>
         </div>
+      </section>
+
+      <section class="section gallery-section" aria-label="Wedding gallery">
+        <p class="eyebrow reveal">Our gallery</p>
+        <h2 class="section-title reveal">Little pieces of our story</h2>
+        <div class="gallery-grid reveal" id="galleryGrid"></div>
       </section>
 
       <section class="section venue-section">
@@ -100,7 +116,7 @@
       </section>
 
       <section class="section share-review">
-        <img data-config-src="secondPhoto" alt="Amal and Merena at sunset" loading="lazy">
+        <img data-config-src="secondPhoto" alt="Amal and Merena running on the beach" loading="lazy">
         <div class="share-copy reveal">
           <h2>Amal & Merena are getting married</h2>
           <p>31 August 2026 · 10.30 am · St. Antony's Church Kurichilakode</p>
@@ -113,6 +129,5 @@
     <script src="script.js"></script>
   </body>
 </html>
-
 
 
